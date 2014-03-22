@@ -35,11 +35,15 @@ public class Player : MonoBehaviour, IPlayer {
 	}
 	
 	void Update () {
+
+	}
+
+	void FixedUpdate () {
 		this.Move();
 	}
 
 	public void Move () {
-		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.deltaTime, Input.GetAxis("Vertical") * this._speed * Time.deltaTime));
+		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.fixedDeltaTime, Input.GetAxis("Vertical") * this._speed * Time.fixedDeltaTime));
 
 		if (Input.GetAxis("Horizontal") > 0) {
 
