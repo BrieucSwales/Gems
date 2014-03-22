@@ -46,4 +46,11 @@ public class Player : MonoBehaviour, IPlayer {
 	public void Die () {
 
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		if (coll.gameObject.tag == "Rock"){
+			Debug.Log ("It's colliding");
+		}
+		
+	}
 }
