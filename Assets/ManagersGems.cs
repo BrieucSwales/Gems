@@ -5,8 +5,7 @@ using System.Collections.Generic;
 public class ManagersGems : MonoBehaviour {
 
 	public List<GameObject> gems; 
-	private int newGemsInArray = 0;
-
+	
 	void Awake()
 	{
 		gems = new List<GameObject>();
@@ -26,4 +25,5 @@ public class ManagersGems : MonoBehaviour {
 	{
 		this.gems.Remove( gem );
 	}
+
 }
