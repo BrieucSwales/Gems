@@ -6,6 +6,8 @@ public class Rock : MonoBehaviour {
 	[SerializeField]
 	private int _life;
 
+	public GameObject gems;
+
 	public int Life {
 		get {
 			return this._life;
@@ -22,8 +24,15 @@ public class Rock : MonoBehaviour {
 	}
 	
 	void Die () {
-		if(_life <= 0)
+		if(_life <= 0) {
+			instantiateGems();
 			Destroy(this.gameObject);
+		}
+	}
+
+	void instantiateGems()
+	{
+		GameObject Gems = Instantiate(gems, transform.position, transform.rotation) as GameObject;
 	}
 	// Use this for initialization
 	void Start () {
