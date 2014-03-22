@@ -7,6 +7,7 @@ public class Rock : MonoBehaviour {
 	private int _life;
 
 	public GameObject gems;
+	private GameObject managerGems;
 
 	public int Life {
 		get {
@@ -25,18 +26,14 @@ public class Rock : MonoBehaviour {
 	
 	void Die () {
 		if(_life <= 0) {
-			instantiateGems();
+			managerGems.GetComponent<ManagersGems>().createGems(gems, transform.position, Quaternion.identity);
 			Destroy(this.gameObject);
 		}
 	}
 
-	void instantiateGems()
-	{
-		GameObject Gems = Instantiate(gems, transform.position, transform.rotation) as GameObject;
-	}
 	// Use this for initialization
 	void Start () {
-	
+		managerGems = GameObject.FindGameObjectWithTag ("GameManager");
 	}
 	
 	// Update is called once per frame
