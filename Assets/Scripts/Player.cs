@@ -25,7 +25,7 @@ public class Player : MonoBehaviour, IPlayer {
 		}
 	}
 
-	private float _speed = 5.0f;
+	private float _speed = 2.0f;
 
 	public float Speed {
 		get {
@@ -54,19 +54,19 @@ public class Player : MonoBehaviour, IPlayer {
 	public void Move () {
 		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.fixedDeltaTime, Input.GetAxis("Vertical") * this._speed * Time.fixedDeltaTime));
 
-		if (Input.GetAxis("Horizontal") > 0) {
+		if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0) {
 
 			this.GetComponent<SpriteRenderer>().sprite = this.sprites[2];
 
-		} else if (Input.GetAxis("Horizontal") < 0) {
+		} else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0) {
 
 			this.GetComponent<SpriteRenderer>().sprite = this.sprites[3];
 
-		} else if (Input.GetAxis("Vertical") > 0) {
+		} else if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0) {
 
 			this.GetComponent<SpriteRenderer>().sprite = this.sprites[1];
 
-		} else if (Input.GetAxis("Vertical") < 0) {
+		} else if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0) {
 
 			this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
 
