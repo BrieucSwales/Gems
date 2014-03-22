@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour, IPlayer {
 
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour, IPlayer {
 		}
 	}
 
+	public List<Sprite> sprites;
+
 	void Start () {
 		
 	}
@@ -37,6 +40,26 @@ public class Player : MonoBehaviour, IPlayer {
 
 	public void Move () {
 		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.deltaTime, Input.GetAxis("Vertical") * this._speed * Time.deltaTime));
+
+		if (Input.GetAxis("Horizontal") > 0) {
+
+			this.GetComponent<SpriteRenderer>().sprite = this.sprites[2];
+
+		} else if (Input.GetAxis("Horizontal") < 0) {
+
+			this.GetComponent<SpriteRenderer>().sprite = this.sprites[3];
+
+		} else if (Input.GetAxis("Vertical") > 0) {
+
+			this.GetComponent<SpriteRenderer>().sprite = this.sprites[1];
+
+		} else if (Input.GetAxis("Vertical") < 0) {
+
+			this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
+
+		} else {
+			this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
+		}
 	}
 
 	public void Attack () {
