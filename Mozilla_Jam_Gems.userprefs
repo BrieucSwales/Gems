@@ -1,11 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Singleton.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MapAnalyser.cs">
     <Files>
-      <File FileName="Assets\Scripts\IPlayer.cs" Line="14" Column="7" />
-      <File FileName="Assets\Scripts\Player.cs" Line="61" Column="65" />
-      <File FileName="Assets\Scripts\Singleton.cs" Line="15" Column="1" />
-      <File FileName="Assets\Scripts\Grid.cs" Line="17" Column="28" />
+      <File FileName="Assets\Scripts\Player.cs" Line="42" Column="3" />
+      <File FileName="Assets\Scripts\MapAnalyser.cs" Line="23" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
