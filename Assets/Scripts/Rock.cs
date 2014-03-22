@@ -27,7 +27,7 @@ public class Rock : MonoBehaviour {
 	
 	void Die () {
 		if(_life <= 0) {
-			for(int i = 0; i < 2; i++)
+			for(int i = 0; i < 5; i++)
 			{
 				managerGems.GetComponent<ManagersGems>().createGems(gems, transform.position, Quaternion.identity);
 			}

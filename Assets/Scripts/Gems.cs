@@ -5,8 +5,6 @@ public class Gems : MonoBehaviour {
 
 	public event System.Action<GameObject> onDestroy;
 
-	[SerializeField]
-	private AnimationCurve _curve;
 	//private AnimationCurve movementBounce;
 
 
