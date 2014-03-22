@@ -6,8 +6,13 @@ public class Player : MonoBehaviour, IPlayer {
 
 	private int _life = 100;
 	private bool _canMine = false;
+
+	// GameObjects
 	public GameObject rocks;
-	private Rock _RockObject;
+	private GameObject _RockObject;
+
+	// INTERFACE 
+	private int _score;
 
 
 	public int Life {
@@ -35,12 +40,11 @@ public class Player : MonoBehaviour, IPlayer {
 	public List<Sprite> sprites;
 
 	void Start () {
-		_RockObject = rocks.GetComponent<Rock>();
+		//_RockObject = rocks.GetComponent<Rock>();
 	}
 	
 	void Update () {
 		Mining();
-
 	}
 
 	void FixedUpdate () {
@@ -72,17 +76,32 @@ public class Player : MonoBehaviour, IPlayer {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
-		if(collision.gameObject.tag == "Rock")
+		if(collision.gameObject.tag == "Rock"){
 			_canMine = true;
+			_RockObject = collision.gameObject;
+		}
+
+		if(collision.gameObject.tag == "Gem"){
+			_score += 10;
+			Collecting(collision.gameObject);
+		}
+	}
+
+	void OnCollisionExit2D(Collision2D collisionInfo) {
+		if(collisionInfo.gameObject.tag == "Rock"){
+			_canMine = false;
+		}
 	}
 
 	void Mining() {
 		if (Input.GetKeyDown("space"))
-			if(_canMine){
-				_canMine = false;
+			if(_canMine && _RockObject != null){
 				_RockObject.SendMessage("TakeDamage", 1);
 			}
+	}
 
+	void Collecting(GameObject Gems) {
+		Gems.SendMessage("Collected");
 	}
 
 	public void Attack () {
