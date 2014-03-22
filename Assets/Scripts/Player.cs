@@ -38,6 +38,11 @@ public class Player : MonoBehaviour, IPlayer {
 		this.Move();
 	}
 
+	void test ()
+	{
+		Debug.Log ("Toto");
+	}
+
 	public void Move () {
 		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.deltaTime, Input.GetAxis("Vertical") * this._speed * Time.deltaTime));
 
