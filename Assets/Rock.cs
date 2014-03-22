@@ -5,6 +5,7 @@ public class Rock : MonoBehaviour {
 
 	[SerializeField]
 	private int _life;
+	public string type;
 
 	public GameObject gems;
 	private GameObject managerGems;
@@ -26,7 +27,10 @@ public class Rock : MonoBehaviour {
 	
 	void Die () {
 		if(_life <= 0) {
-			managerGems.GetComponent<ManagersGems>().createGems(gems, transform.position, Quaternion.identity);
+			for(int i = 0; i < 2; i++)
+			{
+				managerGems.GetComponent<ManagersGems>().createGems(gems, transform.position, Quaternion.identity);
+			}
 			Destroy(this.gameObject);
 		}
 	}
