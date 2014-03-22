@@ -49,9 +49,13 @@ public class MapEditor : Editor {
 		GUILayout.FlexibleSpace();
 		
 		EditorGUILayout.EndHorizontal();
+
 	}
 
 	void GenerateMap () {
+
+		ClearMap();
+
 		this._mapData = myTarget.mapTex.GetPixels();
 		for (int i = 0; i < this._mapData.Length; i++) {
 			if (this._mapData[i] == Color.red) {
