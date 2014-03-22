@@ -5,7 +5,11 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour, IPlayer {
 
 	private int _life = 100;
-	
+	private bool _canMine = false;
+	public GameObject rocks;
+	private Rock _RockObject;
+
+
 	public int Life {
 		get {
 			return this._life;
@@ -31,10 +35,11 @@ public class Player : MonoBehaviour, IPlayer {
 	public List<Sprite> sprites;
 
 	void Start () {
-		
+		_RockObject = rocks.GetComponent<Rock>();
 	}
 	
 	void Update () {
+		Mining();
 
 	}
 
@@ -66,6 +71,20 @@ public class Player : MonoBehaviour, IPlayer {
 		}
 	}
 
+	void OnCollisionEnter2D(Collision2D collision) {
+		if(collision.gameObject.tag == "Rock")
+			_canMine = true;
+	}
+
+	void Mining() {
+		if (Input.GetKeyDown("space"))
+			if(_canMine){
+				_canMine = false;
+				_RockObject.SendMessage("TakeDamage", 1);
+			}
+
+	}
+
 	public void Attack () {
 
 	}
@@ -73,4 +92,5 @@ public class Player : MonoBehaviour, IPlayer {
 	public void Die () {
 
 	}
+
 }
