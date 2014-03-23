@@ -5,6 +5,7 @@ public class Game_Manager : MonoBehaviour {
 	
 	private static Game_Manager instance;
 
+	[SerializeField]
 	private int _score = 0;
 
 	[SerializeField]

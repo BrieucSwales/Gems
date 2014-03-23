@@ -8,14 +8,22 @@ public class Player : MonoBehaviour, IPlayer {
 	private bool _canMine = false;
 
 	// GameObjects
-	public GameObject rocks;
 	private GameObject _RockObject;
+	private GameObject _Trolley;
+
 
 	// INTERFACE 
-	private int _score;
+	//private GameObject _score;
+
+	private bool _canGiveMinerale = false;
 
 	private Animator _animator;
 
+	// Manager de score
+	private GameObject _scoreManager;
+
+	// Chariot
+	public GameObject Trolley;
 
 	public int Life {
 		get {
@@ -42,12 +50,12 @@ public class Player : MonoBehaviour, IPlayer {
 	public List<Sprite> sprites;
 
 	void Start () {
-		//_RockObject = rocks.GetComponent<Rock>();
 		this._animator = this.GetComponent<Animator>();
 	}
 	
 	void Update () {
 		Mining();
+		GivingMineral();
 	}
 
 	void FixedUpdate () {
@@ -87,8 +95,23 @@ public class Player : MonoBehaviour, IPlayer {
 			_RockObject = collision.gameObject;
 		}
 
+		if(collision.gameObject.tag == "Trolley"){
+			_canGiveMinerale = true;
+			_Trolley = collision.gameObject;
+		}
+
 		if(collision.gameObject.tag == "Gem"){
-			_score += 10;
+			if(collision.gameObject.name == "Gem_1(Clone)")
+				Game_Manager.Instance.Score += 10;
+			if(collision.gameObject.name == "Gem_2(Clone)")
+				Game_Manager.Instance.Score += 15;
+			if(collision.gameObject.name == "Gem_3(Clone)")
+				Game_Manager.Instance.Score += 30;
+			if(collision.gameObject.name == "Gem_4(Clone)")
+				Game_Manager.Instance.Score += 50;
+			if(collision.gameObject.name == "Gem_5(Clone)")
+				Game_Manager.Instance.Score += 100;
+
 			Collecting(collision.gameObject);
 		}
 	}
@@ -97,6 +120,10 @@ public class Player : MonoBehaviour, IPlayer {
 		if(collisionInfo.gameObject.tag == "Rock"){
 			_canMine = false;
 		}
+
+		if(collisionInfo.gameObject.tag == "Trolley"){
+			_canGiveMinerale = false;
+		}
 	}
 
 	void Mining() {
@@ -104,6 +131,11 @@ public class Player : MonoBehaviour, IPlayer {
 			if(_canMine && _RockObject != null){
 				_RockObject.SendMessage("TakeDamage", 1);
 			}
+	}
+
+	void GivingMineral() {
+		if (Input.GetKeyDown("space") && _canGiveMinerale)
+			_Trolley.SendMessage("IncreaseScore", 200);
 	}
 
 	void Collecting(GameObject Gems) {
