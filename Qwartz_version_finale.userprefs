@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ManagersGems.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Rock.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="104" Column="3" />
-      <File FileName="Assets\ManagersGems.cs" Line="28" Column="2" />
-      <File FileName="Assets\Editor\MapEditor.cs" Line="62" Column="1" />
+      <File FileName="Assets\Scripts\Player.cs" Line="40" Column="29" />
+      <File FileName="Assets\Scripts\Gems.cs" Line="2" Column="26" />
+      <File FileName="Assets\Scripts\Rock.cs" Line="58" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
