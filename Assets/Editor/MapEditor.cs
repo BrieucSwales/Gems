@@ -66,6 +66,8 @@ public class MapEditor : Editor {
 				GameObject wallClone = Instantiate(myTarget.ground, new Vector3((i % 16) * 0.64f + 0.32f, Mathf.Floor(i / 16) * 0.64f + 0.32f, 0f), Quaternion.identity) as GameObject;
 				wallClone.name = wallClone.name.Replace("(Clone)", "");
 				wallClone.transform.parent = myTarget.transform;
+			} else {
+				Debug.Log("OTHER");
 			}
 		}
 	}

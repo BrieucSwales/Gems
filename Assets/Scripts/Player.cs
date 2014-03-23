@@ -63,33 +63,38 @@ public class Player : MonoBehaviour, IPlayer {
 	}
 
 	public void Move () {
-		this.transform.Translate(new Vector2(Input.GetAxis("Horizontal") * this._speed * Time.fixedDeltaTime, Input.GetAxis("Vertical") * this._speed * Time.fixedDeltaTime));
 
-		if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0) {
+		float horizontal = Input.GetAxis("Horizontal");
+		float vertical = Input.GetAxis("Vertical");
 
-			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[2];
+		this.transform.Translate(new Vector2(horizontal * this._speed * Time.fixedDeltaTime, vertical * this._speed * Time.fixedDeltaTime));
+	
 
-		} else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0) {
+		if (horizontal > 0) {
 
-			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[3];
+			this._animator.SetInteger("Direction", 2);
 
-		} else if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0) {
+		} else if (horizontal < 0) {
 
-			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[1];
+			this._animator.SetInteger("Direction", 1);
 
-		} else if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0) {
+		} else if (vertical > 0) {
 
-			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
+			this._animator.SetInteger("Direction", 3);
+
+		} else if (vertical < 0) {
+
+			this._animator.SetInteger("Direction", 4);
 
 		} else {
-			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
-		}
 
-		this._animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
-		this._animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
+			this._animator.SetInteger("Direction", 0);
+
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
+
 		if(collision.gameObject.tag == "Rock"){
 			_canMine = true;
 			_RockObject = collision.gameObject;
