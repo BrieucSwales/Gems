@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Game_Manager : MonoBehaviour {
-	
-	private static Game_Manager instance;
+public class Game_Manager : SingleBehaviour<Game_Manager> {
 
 	[SerializeField]
 	private int _score = 0;
@@ -32,16 +30,6 @@ public class Game_Manager : MonoBehaviour {
 	}
 
 	private Game_Manager () {}
-	
-	public static Game_Manager Instance {
-		get {
-			if (instance == null) {
-				instance = new Game_Manager();
-			}
-			
-			return instance;
-		}
-	}
 
 	void Awake () {
 		DontDestroyOnLoad(gameObject);

@@ -1,12 +1,15 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player2.cs">
     <Files>
-      <File FileName="Assets\Scripts\Rock.cs" Line="117" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gems.cs" Line="2" Column="26" />
-      <File FileName="Assets\Scripts\Rock.cs" Line="117" Column="1" />
-      <File FileName="Assets\Scripts\ManagersGems.cs" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\Rock.cs" Line="44" Column="18" />
+      <File FileName="Assets\Scripts\Player.cs" Line="123" Column="44" />
+      <File FileName="Assets\Scripts\Gems.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ManagersGems.cs" Line="1" Column="1" />
+      <File FileName="Assets\Trolley.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game_Manager.cs" Line="6" Column="41" />
+      <File FileName="Assets\Scripts\Player2.cs" Line="143" Column="65" />
+      <File FileName="Assets\Plugins\SingleBehaviour.cs" Line="16" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

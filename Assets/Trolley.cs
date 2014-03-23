@@ -29,7 +29,5 @@ public class Trolley : MonoBehaviour {
 
 		if(_score > 1401)
 			this.GetComponent<SpriteRenderer>().sprite = spritesTrolley[5];
-
 	}
-
 }
