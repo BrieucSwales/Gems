@@ -7,6 +7,9 @@ public class Game_Manager : MonoBehaviour {
 
 	private int _score = 0;
 
+	[SerializeField]
+	UILabel _timeLeftLabel;
+
 	public int Score {
 		get {
 			return this._score;
@@ -16,9 +19,9 @@ public class Game_Manager : MonoBehaviour {
 		}
 	}
 
-	private int _timeLeft = 0;
+	private float _timeLeft = 0;
 
-	public int TimeLeft {
+	public float TimeLeft {
 		get {
 			return this._timeLeft;
 		}
@@ -41,5 +44,10 @@ public class Game_Manager : MonoBehaviour {
 
 	void Awake () {
 		DontDestroyOnLoad(gameObject);
+	}
+
+	void Update () {
+		this._timeLeft += Time.deltaTime;
+		this._timeLeftLabel.text = Mathf.Floor(this._timeLeft).ToString();
 	}
 }

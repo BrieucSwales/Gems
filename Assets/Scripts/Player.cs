@@ -14,6 +14,8 @@ public class Player : MonoBehaviour, IPlayer {
 	// INTERFACE 
 	private int _score;
 
+	private Animator _animator;
+
 
 	public int Life {
 		get {
@@ -25,7 +27,7 @@ public class Player : MonoBehaviour, IPlayer {
 		}
 	}
 
-	private float _speed = 2.0f;
+	private float _speed = 1.5f;
 
 	public float Speed {
 		get {
@@ -41,6 +43,7 @@ public class Player : MonoBehaviour, IPlayer {
 
 	void Start () {
 		//_RockObject = rocks.GetComponent<Rock>();
+		this._animator = this.GetComponent<Animator>();
 	}
 	
 	void Update () {
@@ -56,23 +59,26 @@ public class Player : MonoBehaviour, IPlayer {
 
 		if (Input.GetAxis("Horizontal") > 0 && Input.GetAxis("Vertical") == 0) {
 
-			this.GetComponent<SpriteRenderer>().sprite = this.sprites[2];
+			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[2];
 
 		} else if (Input.GetAxis("Horizontal") < 0 && Input.GetAxis("Vertical") == 0) {
 
-			this.GetComponent<SpriteRenderer>().sprite = this.sprites[3];
+			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[3];
 
 		} else if (Input.GetAxis("Vertical") > 0 && Input.GetAxis("Horizontal") == 0) {
 
-			this.GetComponent<SpriteRenderer>().sprite = this.sprites[1];
+			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[1];
 
 		} else if (Input.GetAxis("Vertical") < 0 && Input.GetAxis("Horizontal") == 0) {
 
-			this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
+			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
 
 		} else {
-			this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
+			//this.GetComponent<SpriteRenderer>().sprite = this.sprites[0];
 		}
+
+		this._animator.SetFloat("Vertical", Input.GetAxis("Vertical"));
+		this._animator.SetFloat("Horizontal", Input.GetAxis("Horizontal"));
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
