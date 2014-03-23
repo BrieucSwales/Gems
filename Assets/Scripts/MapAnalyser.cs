@@ -11,6 +11,5 @@ public class MapAnalyser : MonoBehaviour {
 	void Start () {
 		//GenerateMap ();
 	}
-	
 
 }
