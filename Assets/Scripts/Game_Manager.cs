@@ -7,9 +7,17 @@ public class Game_Manager : SingleBehaviour<Game_Manager> {
 	private int _score = 0;
 
 	[SerializeField]
+	private int _scorePlayer2 = 0;
+
+	[SerializeField]
 	UILabel _timeLeftLabel;
 
 	public int Score {
+		get;
+		set;
+	}
+
+	public int ScorePlayer2 {
 		get;
 		set;
 	}

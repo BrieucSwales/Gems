@@ -82,16 +82,16 @@ public class Player2 : MonoBehaviour, IPlayer {
 		
 		if(collision.gameObject.tag == "Gem"){
 			if(collision.gameObject.name == "Gem_1(Clone)")
-				Game_Manager.Instance.Score += 10;
+				Game_Manager.Instance.ScorePlayer2 += 10;
 			if(collision.gameObject.name == "Gem_2(Clone)")
-				Game_Manager.Instance.Score += 15;
+				Game_Manager.Instance.ScorePlayer2 += 15;
 			if(collision.gameObject.name == "Gem_3(Clone)")
-				Game_Manager.Instance.Score += 30;
+				Game_Manager.Instance.ScorePlayer2 += 30;
 			if(collision.gameObject.name == "Gem_4(Clone)")
-				Game_Manager.Instance.Score += 50;
+				Game_Manager.Instance.ScorePlayer2 += 50;
 			if(collision.gameObject.name == "Gem_5(Clone)")
-				Game_Manager.Instance.Score += 100;
-			
+				Game_Manager.Instance.ScorePlayer2 += 100;
+
 			Collecting(collision.gameObject);
 		}
 	}
@@ -115,7 +115,7 @@ public class Player2 : MonoBehaviour, IPlayer {
 	
 	void GivingMineral() {
 		if (Input.GetKeyDown("space") || Input.GetButton("Fire1Player2") && _canGiveMinerale)
-			_Trolley.SendMessage("IncreaseScore", 200);
+			_Trolley.SendMessage("IncreaseScorePlayer2", 200);
 	}
 	
 	void Collecting(GameObject Gems) {

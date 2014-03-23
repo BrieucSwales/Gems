@@ -51,7 +51,6 @@ public class Player : MonoBehaviour, IPlayer {
 
 	void Start () {
 		this._animator = this.GetComponent<Animator>();
-		Game_Manager.Instance.Score = 100;
 		print(Color.grey);
 	}
 	
@@ -69,7 +68,6 @@ public class Player : MonoBehaviour, IPlayer {
 		float horizontal = Input.GetAxis("Horizontal");
 		float vertical = Input.GetAxis("Vertical");
 	
-
 		this.transform.Translate(new Vector2(horizontal * this._speed * Time.fixedDeltaTime, vertical * this._speed * Time.fixedDeltaTime));
 	
 
@@ -122,7 +120,7 @@ public class Player : MonoBehaviour, IPlayer {
 
 			Collecting(collision.gameObject);
 
-			Debug.Log (Game_Manager.Instance.Score);
+			Debug.Log (Game_Manager.Instance.Score + " Player one");
 		}
 	}
 
