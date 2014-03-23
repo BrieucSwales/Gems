@@ -3,30 +3,23 @@ using System.Collections;
 
 public class Game_Manager : SingleBehaviour<Game_Manager> {
 
+<<<<<<< HEAD
 	[SerializeField]
 	private int _score = 0;
 
+=======
+>>>>>>> faf2b552455d361508562bc5c606187d4e8805e3
 	[SerializeField]
 	UILabel _timeLeftLabel;
 
 	public int Score {
-		get {
-			return this._score;
-		}
-		set {
-			this._score = value;
-		}
+		get;
+		set;
 	}
 
-	private float _timeLeft = 0;
-
 	public float TimeLeft {
-		get {
-			return this._timeLeft;
-		}
-		set {
-			this._timeLeft = value;
-		}
+		get;
+		set;
 	}
 
 	private Game_Manager () {}
@@ -36,7 +29,7 @@ public class Game_Manager : SingleBehaviour<Game_Manager> {
 	}
 
 	void Update () {
-		this._timeLeft += Time.deltaTime;
-		this._timeLeftLabel.text = Mathf.Floor(this._timeLeft).ToString();
+		this.TimeLeft += Time.deltaTime;
+		this._timeLeftLabel.text = Mathf.Floor(this.TimeLeft).ToString();
 	}
 }

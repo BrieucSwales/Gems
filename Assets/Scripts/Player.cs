@@ -51,6 +51,8 @@ public class Player : MonoBehaviour, IPlayer {
 
 	void Start () {
 		this._animator = this.GetComponent<Animator>();
+		Game_Manager.Instance.Score = 100;
+		print(Color.grey);
 	}
 	
 	void Update () {
