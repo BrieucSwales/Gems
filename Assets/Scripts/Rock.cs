@@ -3,6 +3,18 @@ using System.Collections;
 
 public class Rock : MonoBehaviour {
 
+	enum Types {
+		None,
+		Rock_1,
+		Rock_2,
+		Rock_3,
+		Rock_4, 
+		Rock_5
+	}
+
+	[SerializeField]
+	private Types _type = Types.None;
+
 	[SerializeField]
 	private int _life;
 	public string type;
