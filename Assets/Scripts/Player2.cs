@@ -16,7 +16,8 @@ public class Player2 : MonoBehaviour, IPlayer {
 	//private GameObject _score;
 	
 	private bool _canGiveMinerale = false;
-	
+
+	private Animator _animator;
 	// Manager de score
 	private GameObject _scoreManager;
 	
@@ -48,6 +49,7 @@ public class Player2 : MonoBehaviour, IPlayer {
 	public List<Sprite> sprites;
 	
 	void Start () {
+		this._animator = this.GetComponent<Animator>();
 	}
 	
 	void Update () {
@@ -66,6 +68,35 @@ public class Player2 : MonoBehaviour, IPlayer {
 		
 		
 		this.transform.Translate(new Vector2(horizontal * this._speed * Time.fixedDeltaTime, vertical * this._speed * Time.fixedDeltaTime));
+		
+		
+		if (horizontal > 0) {
+			
+			this._animator.SetInteger("Direction", 2);
+			
+		} else if (horizontal < 0 ) {
+			
+			this._animator.SetInteger("Direction", 1);
+			
+		} else if (vertical > 0) {
+			
+			this._animator.SetInteger("Direction", 3);
+			
+		} else if (vertical < 0) {
+
+			this._animator.SetInteger("Direction", 4);
+			
+		} else {
+			
+			this._animator.SetInteger("Direction", 0);
+			
+		}
+
+		if(horizontal > 0 && _canMine){
+			Debug.Log ("test");
+			this._animator.SetInteger("Attack", 4);
+		}
+			
 	}
 	
 	void OnCollisionEnter2D(Collision2D collision) {
@@ -108,9 +139,10 @@ public class Player2 : MonoBehaviour, IPlayer {
 	
 	void Mining() {
 		if (Input.GetKeyDown("space") || Input.GetButton("Fire1Player2"))
-		if(_canMine && _RockObject != null){
-			_RockObject.SendMessage("TakeDamage", 1);
-		}
+			if(_canMine && _RockObject != null){
+
+				_RockObject.SendMessage("TakeDamage", 1);
+			}
 	}
 	
 	void GivingMineral() {
