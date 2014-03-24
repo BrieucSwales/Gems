@@ -1,14 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\MapEditor.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player.cs">
     <Files>
-      <File FileName="Assets\Scripts\MapAnalyser.cs" Line="13" Column="32" />
-      <File FileName="Assets\Scripts\Player.cs" Line="47" Column="21" />
-      <File FileName="Assets\Scripts\MapAnalyser.cs" Line="9" Column="25" />
-      <File FileName="Assets\Editor\MapEditor.cs" Line="94" Column="58" />
-      <File FileName="Assets\Scripts\Gems.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Rock.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Game_Manager.cs" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\Player.cs" Line="59" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
