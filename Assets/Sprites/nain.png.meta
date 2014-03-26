@@ -49,7 +49,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 192
+        y: 448
         width: 36
         height: 52
       alignment: 0
@@ -58,7 +58,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 192
+        y: 448
         width: 36
         height: 50
       alignment: 0
@@ -67,7 +67,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 192
+        y: 448
         width: 36
         height: 52
       alignment: 0
@@ -76,7 +76,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 192
+        y: 448
         width: 36
         height: 50
       alignment: 0
@@ -85,7 +85,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 128
+        y: 384
         width: 36
         height: 52
       alignment: 0
@@ -94,7 +94,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 128
+        y: 384
         width: 36
         height: 50
       alignment: 0
@@ -103,7 +103,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 128
+        y: 384
         width: 36
         height: 52
       alignment: 0
@@ -112,7 +112,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 128
+        y: 384
         width: 36
         height: 50
       alignment: 0
@@ -121,7 +121,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 22
-        y: 64
+        y: 320
         width: 26
         height: 52
       alignment: 0
@@ -130,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 84
-        y: 64
+        y: 320
         width: 26
         height: 52
       alignment: 0
@@ -139,7 +139,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 150
-        y: 64
+        y: 320
         width: 26
         height: 52
       alignment: 0
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 212
-        y: 64
+        y: 320
         width: 26
         height: 52
       alignment: 0
@@ -157,7 +157,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 0
+        y: 256
         width: 26
         height: 52
       alignment: 0
@@ -166,7 +166,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 82
-        y: 0
+        y: 256
         width: 26
         height: 52
       alignment: 0
@@ -175,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 144
-        y: 0
+        y: 256
         width: 26
         height: 52
       alignment: 0
@@ -184,8 +184,152 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 210
-        y: 0
+        y: 256
         width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_16
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 192
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_17
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 192
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_18
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 192
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 192
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_20
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_21
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_22
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_23
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 128
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_24
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 64
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_25
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 64
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_26
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 64
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_27
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 64
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_28
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_29
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_30
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+    - name: nain_31
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 36
         height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
