@@ -1,4 +1,4 @@
-Mozilla_Jam_Gems
+Gems
 ================
 
-Mozilla_Jam_Gems
+Game made for a game jam at Mozilla Paris.
